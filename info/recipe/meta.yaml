@@ -1,0 +1,80 @@
+# This file created by conda-build 3.25.0
+# meta.yaml template originally from:
+# /opt/conda, last modified Mon Jun 26 01:54:23 2023
+# ------------------------------------------------
+
+package:
+  name: dgl
+  version: 1.1.1.cu113
+source:
+  git_rev: 1.1.x
+  git_url: https://github.com/dmlc/dgl.git
+build:
+  script_env:
+    - CACHEDIR
+    - CUDA_VER
+    - DGL_CONDA_VERSION_SUFFIX
+    - DGL_RELEASE_BRANCH
+    - DGL_VERSION_SUFFIX
+    - USE_CUDA
+  string: py39_0
+requirements:
+  build:
+    - _libgcc_mutex 0.1 main
+    - _openmp_mutex 5.1 1_gnu
+    - bzip2 1.0.8 h7b6447c_0
+    - c-ares 1.19.0 h5eee18b_0
+    - ca-certificates 2023.05.30 h06a4308_0
+    - cmake 3.26.4 h96355d8_0
+    - curl 7.88.1 h5eee18b_1
+    - cython 0.29.35 py39h6a678d5_0
+    - expat 2.4.9 h6a678d5_0
+    - gdbm 1.18 hd4cb3f1_4
+    - gettext 0.21.0 h39681ba_1
+    - git 2.40.1 pl5340h36fbf9e_1
+    - icu 58.2 he6710b0_3
+    - krb5 1.20.1 h143b758_1
+    - ld_impl_linux-64 2.38 h1181459_1
+    - libcurl 7.88.1 h251f7ec_1
+    - libedit 3.1.20221030 h5eee18b_0
+    - libev 4.33 h7f8727e_1
+    - libffi 3.4.4 h6a678d5_0
+    - libgcc-ng 11.2.0 h1234567_1
+    - libgomp 11.2.0 h1234567_1
+    - libnghttp2 1.52.0 h2d74bed_1
+    - libssh2 1.10.0 hdbd6064_2
+    - libstdcxx-ng 11.2.0 h1234567_1
+    - libuv 1.44.2 h5eee18b_0
+    - libxml2 2.10.3 hcbfbd50_0
+    - lz4-c 1.9.4 h6a678d5_0
+    - ncurses 6.4 h6a678d5_0
+    - openssl 3.0.9 h7f8727e_0
+    - pcre2 10.42 hebb0a14_0
+    - perl 5.34.0 h5eee18b_2
+    - pip 23.1.2 py39h06a4308_0
+    - python 3.9.16 h955ad1f_3
+    - readline 8.2 h5eee18b_0
+    - rhash 1.4.3 hdbd6064_0
+    - setuptools 67.8.0 py39h06a4308_0
+    - sqlite 3.41.2 h5eee18b_0
+    - tk 8.6.12 h1ccaba5_0
+    - tzdata 2023c h04d1e81_0
+    - wheel 0.38.4 py39h06a4308_0
+    - xz 5.4.2 h5eee18b_0
+    - zlib 1.2.13 h5eee18b_0
+    - zstd 1.5.5 hc292b87_0
+  run:
+    - networkx
+    - numpy
+    - psutil
+    - python >=3.9,<3.10.0a0
+    - requests
+    - scipy
+    - tqdm
+about:
+  home: https://github.com/dmlc/dgl.git
+  license: Apache
+  license_file: /root/miniconda3/conda-bld/dgl_1687756000909/work/LICENSE
+extra:
+  copy_test_source_files: true
+  final: true
